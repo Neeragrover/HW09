@@ -12,7 +12,23 @@
 # Body
 
 def most_frequent(s):
-    print s
+	s_lower = s.lower()
+	list_ = list(s_lower)
+	print "original",list_
+	hist_string = histogram_new(s_lower)
+	print "hist",hist_string
+	x = sorted(hist_string, key= hist_string.__getitem__)
+	print "x",x
+	for item in x:
+		print item
+	
+def histogram_new(s):
+	d = dict()
+	for c in s:
+		d[c] = d.get(c,0)
+		d[c] +=1
+	return d
+
 
 ###############################################################################
 def main():   # DO NOT CHANGE BELOW

@@ -13,7 +13,13 @@
 # Imports
 
 # Body
-
+def sumall(*vals):
+	length = len(vals)
+	sum = 0
+	for i in range (length):
+		sum = sum + vals[i]
+	return sum
+		
 
 
 ###############################################################################
